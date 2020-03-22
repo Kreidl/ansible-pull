@@ -11,10 +11,9 @@ sudo apt-get install -y ansible
 
 #Create directory
 sudo mkdir -p /etc/ansible
-
+#Switch in directory and clone repo
 cd /etc/ansible
+sudo git clone https://github.com/Kreidl/ansible-pull
 
-sudo git clone https://github.com/Kreidl/ansible-pull .
-
-sudo crontab -u root -l
-0 5 0 ? * * * ./node-runner.sh
+#Add cronjob
+sudo crontab -u root /etc/ansible/ansible-pull/cronjob

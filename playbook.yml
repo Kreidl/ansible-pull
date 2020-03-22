@@ -1,0 +1,11 @@
+---
+  - hosts: localhost
+    connection: local
+    tasks:
+      - name: Create Testeruser
+        user:
+          name: tester
+          comment: Testuser for ansiblepull
+          uid: 10000
+          group: admin
+          shell: /bin/bash

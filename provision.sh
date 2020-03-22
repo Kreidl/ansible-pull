@@ -15,3 +15,6 @@ sudo mkdir -p /etc/ansible
 cd /etc/ansible
 
 sudo git clone https://github.com/Kreidl/ansible-pull .
+
+sudo crontab -u root -l
+0 5 0 ? * * * ./node-runner.sh

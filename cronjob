@@ -1,1 +1,1 @@
-*/5 * * * * ./node-runner.sh
+*/1 * * * * ./node-runner.sh

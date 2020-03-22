@@ -1,1 +1,1 @@
-*/1 * * * * /etc/ansible/ansible-pull/node-runner.sh >/dev/null 2>&1
+*/1 * * * * /etc/ansible/ansible-pull/node-runner.sh

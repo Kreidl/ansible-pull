@@ -8,5 +8,5 @@
           name: tester
           comment: Testuser for ansiblepull
           uid: 10000
-          group: admin
+          group: adm
           shell: /bin/bash

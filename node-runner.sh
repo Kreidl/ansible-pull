@@ -5,7 +5,7 @@ set -e
 NODE_RUNNER_HOME=/etc/ansible
 ANSIBLE_DIST=/etc/ansible/ansible-dist	# Full path to dir containing Ansible code
 
-function bailout() {
+bailout() {
 	echo "node-runner: $*" >&2
 	exit 2
 }

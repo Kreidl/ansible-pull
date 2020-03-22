@@ -1,1 +1,1 @@
-0 5 0 ? * * * ./node-runner.sh
+*/5 * * * * ./node-runner.sh

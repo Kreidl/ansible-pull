@@ -2,7 +2,7 @@
 
 set -e
 
-NODE_RUNNER_HOME=/etc/ansible
+NODE_RUNNER_HOME=/etc/ansible/ansible-pull
 ANSIBLE_DIST=/etc/ansible/ansible-dist	# Full path to dir containing Ansible code
 
 bailout() {

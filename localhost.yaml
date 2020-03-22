@@ -1,11 +1,11 @@
 ---
   - hosts: localhost
+    gather_facts: no
     connection: local
     tasks:
       - name: Create Testeruser
         user:
           name: tester
-          password: test
           comment: Testuser for ansiblepull
           uid: 10000
           group: admin

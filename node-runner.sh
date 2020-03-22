@@ -1,9 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 
 NODE_RUNNER_HOME=/etc/ansible/ansible-pull
-ANSIBLE_DIST=/etc/ansible/ansible-dist	# Full path to dir containing Ansible code
 
 bailout() {
 	echo "node-runner: $*" >&2
@@ -17,15 +16,6 @@ if [ -d "$NODE_RUNNER_HOME" ]; then
 	source $NODE_RUNNER_HOME/node-runner.cf
 else
 	echo "$0: \$NODE_RUNNER_HOME is not a directory." >&2
-	exit 1
-fi
-
-if [ -d "$ANSIBLE_DIST" ]; then
-
-	cd $ANSIBLE_DIST
-	source hacking/env-setup  > /dev/null
-else
-	echo "$0: \$ANSIBLE_DIST is not a directory." >&2
 	exit 1
 fi
 

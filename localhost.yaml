@@ -10,3 +10,10 @@
           uid: 10000
           group: adm
           shell: /bin/bash
+      - name: Create Seconduser
+        user:
+          name: second
+          comment: Seconduser for ansiblepull
+          uid: 10001
+          group: adm
+          shell: /bin/bash

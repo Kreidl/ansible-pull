@@ -25,12 +25,13 @@ cd $NODE_RUNNER_HOME
 OLD_HEAD=$(git rev-parse HEAD)
 $git pull --quiet
 NEW_HEAD=$(git rev-parse HEAD)
-# Re-read our config, as it may have changed after pull
-
-source $NODE_RUNNER_HOME/node-runner.cf
 
 # exit if files did not change
 [ $OLD_HEAD = $NEW_HEAD ] && exit 0
+
+# Re-read our config, as it may have changed after pull
+
+source $NODE_RUNNER_HOME/node-runner.cf
 
 # Run the playbook
 

@@ -22,15 +22,15 @@ fi
 [ -x $git ] || bailout "Can't find $git or is not executable"
 
 cd $NODE_RUNNER_HOME
+OLD_HEAD=$(git rev-parse HEAD)
 $git pull --quiet
-
+NEW_HEAD=$(git rev-parse HEAD)
 # Re-read our config, as it may have changed after pull
 
 source $NODE_RUNNER_HOME/node-runner.cf
 
-# todo: maybe check md5sum of node-runner.sh before and after pull to
-# decide if we want to re-exec node-runner.sh :)
-
+# exit if files did not change
+[ $OLD_HEAD = $NEW_HEAD ] && exit 0
 
 # Run the playbook
 
